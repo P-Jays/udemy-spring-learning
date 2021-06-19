@@ -7,7 +7,7 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:property-placeholder location="sport.properties"/>
+   
     
     <!-- Define your beans here -->
     <bean id="myFortune" class="com.udemy.training.HappyFortuneService"></bean>
@@ -15,9 +15,5 @@
         <constructor-arg ref="myFortune"/>
     </bean>
 
-    <bean id="myCoach2" class="com.udemy.training.CricketCoach">
-        <property name="fortuneService" ref="myFortune"></property> 
-        <property name="team" value="${pj.team}"></property>
-        <property name="emailAddress" value="${pj.emailAddress}"></property>
-    </bean>
+
 </beans>
