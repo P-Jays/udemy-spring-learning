@@ -20,5 +20,13 @@ public class BaseballCoach implements Coach {
         
         return this.fortuneService.getFortune();
     }
+
+    public void initMethod(){
+        System.out.println("spring init method ");
+    }
+
+    public void destroyMethod() {
+        System.out.println("spring destroy method ");
+    }
     
 }

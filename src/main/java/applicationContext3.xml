@@ -12,7 +12,7 @@
     <!-- Define your beans here -->
     <bean id="myFortune" class="com.udemy.training.HappyFortuneService"></bean>
       <!-- scope="prototype" membuat reference baru pada saat membuat context baru -->
-    <bean id="myCoach" class="com.udemy.training.BaseballCoach" scope="prototype">
+    <bean id="myCoach" class="com.udemy.training.BaseballCoach" init-method="initMethod" destroy-method="destroyMethod">
       
         <constructor-arg ref="myFortune"/>
     </bean>

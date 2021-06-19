@@ -26,24 +26,38 @@ public class App {
 
         // setter injection
 
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+        // ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 
-        CricketCoach myCoach = context.getBean("myCoach2", CricketCoach.class); // bsa coach , bsa cricketcoach
+        // CricketCoach myCoach = context.getBean("myCoach2", CricketCoach.class); // bsa coach , bsa cricketcoach
 
-        System.out.println(myCoach.getDailyWorkout());
+        // System.out.println(myCoach.getDailyWorkout());
 
-        System.out.println(myCoach.getDailyFortune());
+        // System.out.println(myCoach.getDailyFortune());
 
-        System.out.println(myCoach.getEmailAddress());
+        // System.out.println(myCoach.getEmailAddress());
 
-        System.out.println(myCoach.getTeam());
+        // System.out.println(myCoach.getTeam());
 
-        context.close();
+        // context.close();
 
-        ClassPathXmlApplicationContext context2 = new ClassPathXmlApplicationContext("applicationContext2.xml");
+        // ClassPathXmlApplicationContext context2 = new ClassPathXmlApplicationContext("applicationContext2.xml");
     
-        Coach daCoach = context2.getBean("myCoach", Coach.class);
+        // Coach daCoach = context2.getBean("myCoach", Coach.class);
 
-        Coach aplCoach = context2.getBean("myCoach", Coach.class);
+        // Coach aplCoach = context2.getBean("myCoach", Coach.class);
+
+        ClassPathXmlApplicationContext context3 = new ClassPathXmlApplicationContext("applicationContext3.xml");
+
+        BaseballCoach aCoach = context3.getBean("myCoach", BaseballCoach.class);
+
+        System.out.println(aCoach.getDailyWorkout());
+
+        context3.close();
+
+        // context need to be close for show destroy-method
+
+        
+
+        
     }
 }
